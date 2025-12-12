@@ -1,0 +1,58 @@
+/* Layout and Spacing */
+.site-main {
+  min-height: 100vh;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.section {
+  padding: 60px 0;
+  margin: 0;
+  position: relative;
+}
+
+/* Adjust last section to have proper bottom spacing */
+#contact {
+  padding-bottom: 60px;
+  margin-bottom: 0;
+}
+
+/* Container Adjustments */
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+}
+
+/* Form specific spacing */
+.contact-form {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 0;
+  }
+  
+  #contact {
+    padding-bottom: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 32px 0;
+  }
+  
+  #contact {
+    padding-bottom: 32px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+}

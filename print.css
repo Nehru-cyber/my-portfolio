@@ -1,0 +1,65 @@
+@media print {
+  :root {
+    --bg-1: #ffffff;
+    --bg-2: #ffffff;
+    --text: #111827;
+    --muted: #4B5563;
+    --glass: transparent;
+    --glass-strong: transparent;
+    --shadow: none;
+  }
+  html,body {
+    background: #ffffff;
+    color: var(--text);
+  }
+  body::before,
+  header,
+  .menu-toggle,
+  .mobile-nav,
+  .header-actions,
+  canvas.bg-canvas {
+    display: none !important;
+  }
+  .container {
+    padding: 18mm;
+    max-width: none;
+  }
+  .profile-card {
+    float: right;
+    width: 120px;
+    height: 120px;
+    border-radius: 6px;
+    margin-left: 12px;
+    background: none;
+    box-shadow: none;
+    border: 1px solid #e2e8f0;
+  }
+  .project-card {
+    break-inside: avoid;
+    border: 1px solid #e2e8f0;
+    background: none;
+    box-shadow: none;
+  }
+  h2,h3,h4 {
+    page-break-inside: avoid;
+    break-inside: avoid;
+    color: #111827;
+  }
+  p, li {
+    font-size: 11pt;
+    line-height: 1.6;
+  }
+  a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 90%;
+    color: #6B7280;
+  }
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}

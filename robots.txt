@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://nehruprasad.com/sitemap.xml
+
+# Optimize crawling
+Disallow: /assets/
+Disallow: /cases/*.html$
+Allow: /cases/index.html
