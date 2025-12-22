@@ -862,13 +862,34 @@ body::after {
 }
 
 .profile-img-wrap {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto 16px;
     position: relative;
     border-radius: 20px;
     padding: 4px;
-    background: linear-gradient(135deg, var(--accent-2), var(--accent-5));
+    background: linear-gradient(135deg, var(--accent-2), var(--accent-5), var(--accent-1));
+    background-size: 200% 200%;
+    animation: profileGlow 4s ease infinite;
+    box-shadow: 0 10px 40px rgba(99, 102, 241, 0.3);
+    transition: all var(--transition-normal) var(--cubic-bounce);
+}
+
+.profile-img-wrap:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 20px 60px rgba(99, 102, 241, 0.5);
+}
+
+@keyframes profileGlow {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
 }
 
 .profile-img-wrap img {
@@ -876,6 +897,13 @@ body::after {
     height: 100%;
     border-radius: 16px;
     object-fit: cover;
+    object-position: top center;
+    transition: all var(--transition-normal) ease;
+    filter: brightness(1) contrast(1.05);
+}
+
+.profile-img-wrap:hover img {
+    filter: brightness(1.1) contrast(1.1);
 }
 
 .profile-ring {
@@ -905,9 +933,10 @@ body::after {
 .profile-sheen {
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), transparent 50%);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, transparent 40%, transparent 60%, rgba(255, 255, 255, 0.1) 100%);
     border-radius: 16px;
     pointer-events: none;
+    opacity: 0.8;
 }
 
 .profile-info .name {
