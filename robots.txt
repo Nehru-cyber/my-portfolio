@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Sitemap: https://nehruprasad.com/sitemap.xml
+Sitemap: https://nehru.dev/sitemap.xml
 
 # Optimize crawling
 Disallow: /assets/
